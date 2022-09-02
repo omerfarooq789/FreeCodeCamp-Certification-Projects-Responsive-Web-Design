@@ -1,0 +1,81 @@
+body{
+	background:url(https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg?cs=srgb&dl=pexels-todd-trapani-1420440.jpg&fm=jpg);
+	color: #f5f6f7;
+	background-size: cover;
+	font-family: sans-serif;
+	padding-bottom: 80px;
+}
+#title{
+	padding-top: 20px;
+	font-size: 35px;
+}
+#description{
+	font-size: 20px;
+}
+#title, #description{
+	text-align: center;
+	color: rgb(92 74 47);
+}
+.container{
+	background-color: rgba(114, 89, 54, 0.8);
+	width: 800px;
+	text-align: left;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-radius: 8px;
+}
+fieldset{
+	padding: 10px 30px;
+	border: none;
+}
+#satisfaction-label, #doyou-label{
+	display: block;
+	padding-top: 10px;
+}
+#satisfaction-label{
+	padding-bottom: 10px;
+}
+input[type="radio"], input[type="checkbox"]{
+	width: 20px;
+	height: 15px;
+	display: unset;
+	border-color: transparent;
+}
+label{
+	font-size: 20px;
+}
+input,select,label,textarea{
+	border-radius: 6px;
+	display: block;
+	margin-top: 10px;
+	border-color: rgba(114, 89, 54, 0.8);
+	padding: 0.1rem 0.25rem;
+}
+select{
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+}
+#name, #number, #email{
+	width: 100%;
+	height: 30px;
+}
+#comments{
+	margin-top: 15px;
+	font-size: 18px;
+	width: 100%;
+}
+#submit{
+	display: block;
+	margin: 1rem auto;
+	width: 80%;
+	height: 50px;
+	font-size: 25px;
+	color: #f5f6f7;
+	border-radius: 5px;
+	border-color: rgb(215 110 54);
+	box-shadow: 0 0 5px 0 rgb(215 110 54);
+	background-color: rgb(215 110 54);
+}
+
+

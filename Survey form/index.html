@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Employee Survey Form</title>
+	</head>
+	<body>
+		<header>
+			<h1 id="title">Employee Survey Form</h1>
+			<p id="description">Thank you for taking the time to take the survey</p>
+		</header>
+		<div class="container">
+			<form id="survey-form" action="_blank">
+				<fieldset id="1st-fieldset">
+					<label id="name-label">Name: <input type="text" name="name" id="name" placeholder="Your Name" required></label>
+					<label id="email-label">Email: <input type="email" name="email" id="email" placeholder="Your Email" required></label>
+					<label id="number-label">Age:<input type="number" name="age" id="number" min="10" max="120" placeholder="Your Age"></label>
+				</fieldset>
+				<fieldset id="2nd-fieldset">
+					<label id="dropdown-label">What is your Role in the Organization
+						<select id="dropdown">
+							<option id="none" value="">Select Your Role</option>
+							<option id="employee" value="employee">Employee</option>
+							<option id="employer" value="employer">Employer</option>
+						</select>
+					</label>
+					<label id="satisfaction-label">
+						How would you describe your overall level of Job Satisfaction?
+						<label id="very-sat-label"><input type="radio" name="satisfaction" value="very-sat" id="very-sat"> Very Satisfied</label>
+						<label id="some-sat-label"><input type="radio" name="satisfaction" value="some-sat" id="some-sat"> Somewhat Satisfied</label>
+						<label id="nuetral-label"><input type="radio" name="satisfaction" value="nuetral" id="nuetral"> Nuetral</label>
+						<label id="some-dissat-label"><input type="radio" name="satisfaction" value="some-dissat" id="some-dissat"> Somewhat Dissatisfied</label>
+						<label id="very-dissat-label"><input type="radio" name="satisfaction" value="very-dissat" id="very-dissat"> Very Dissatisfied</label>
+					</label>
+					<label id="doyou-label">
+						Do you
+						<label id="valued-label"><input type="checkbox" name="valued" value="valued" id="valued"> Feel Valued at Work?</label>
+						<label id="resources-label"><input type="checkbox" name="resources" value="resources" id="resources"> Have the Resources you need to perform your job well?</label>
+						<label id="stress-label"><input type="checkbox" name="stress" value="stress" id="stress"> Feel Stress or Anxiety at work?</label>
+						<label id="opinion-label"><input type="checkbox" name="opinion" value="opinion" id="opinion"> Feel your Opinions and Feedback are being Listened to?</label>
+					</label>
+				</fieldset>
+				<fieldset id="3rd-fieldset">
+					<label id="comments-label">
+						Any additional Comments or Feedbacks?
+						<textarea id="comments" rows="5" placeholder="Enter your comments here..."></textarea>
+					</label>
+				</fieldset>
+				<input type="submit" name="Submit" id="submit">
+			</form>
+		</div>
+
+	</body>
+</html>
