@@ -1,7 +1,7 @@
 # 1st-Certifications-Build-a-Survey-Form
 ## Objective: Build an app that is functionally similar to https://survey-form.freecodecamp.rocks
 
-User Stories:
+### User Stories:
 
 You should have a page title in an h1 element with an id of title
 You should have a short explanation in a p element with an id of description
@@ -28,7 +28,7 @@ Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to l
 
 
 
-************TESTS******************
+### TESTS
 You should have an h1 element with an id of title.
 Your #title should not be empty.
 You should have a p element with an id of description.
