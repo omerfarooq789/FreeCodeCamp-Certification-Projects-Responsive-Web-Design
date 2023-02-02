@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d7d7d7;
+}
+.logo{
+    margin-top: 10px;
+    width: 50vw;
+}
+#header-img{
+    width: 200px;
+    height: 120px;
+}
+.navv{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.navv li{
+    margin: 0 20px;
+}
+.navv a{
+    color:rgb(92, 86, 80);
+    text-decoration: none;
+}
+main{
+    margin-top: 138px;
+    text-align: center;
+    background-color: #d7d7d7;
+}
+.home{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.moto{
+    width: 49vw;
+}
+.moto h1{
+    padding: 25px 0px;
+}
+h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bold{
+    font-weight: bold;
+}
+.moto p{
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+#home-img{
+    width: 50vw;
+}
+.About_Us h3{
+    font-size: 1.8em;
+}
+.About_Us p{
+    font-size: 1.5em;
+}
+#video{
+    width:80vw; 
+} 
+.pro-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+figure img{
+    width:100%;
+    height: 600px;
+}
+figcaption{
+    font-size: 1.3em;
+}
+.Contact_Us p{
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+form{
+    margin: 0 auto;
+}
+#name, #email{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 4px;
+    background-color: #d7d7d7;
+}
+#submit{
+    width: 30%;
+    background-color: #575fcf;
+    color: white;
+    padding: 14px 20px ;
+    margin: 8px 0 100px;
+    border: none;
+    border-radius: 4px;
+}
+
+@media(max-width:750px){
+    header{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        position: relative;
+        width: 100%;
+    }
+    .logo img{
+        margin: 0 290px;
+    }
+    .navv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; display: block;
+    }
+    main{
+        margin-top: 340px;
+    }
+    .home{
+        display: block;
+    }
+    .moto{
+        text-align: center;
+        width: 100%;
+    }
+    #home-img{
+        width: 100vw;
+    }
+    .pro-grid{
+        display: block;
+    }
+}

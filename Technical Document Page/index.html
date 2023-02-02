@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>jQuery Document</header>
+        <ul>
+            <li><hr>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li><hr>
+                <a class="nav-link" href="#Getting_Started">Getting Started</a>
+            </li>
+            <li><hr>
+                <a class="nav-link" href="#jQuery_Syntax">jQuery Syntax</a>
+            </li>
+            <li><hr>
+                <a class="nav-link" href="#jQuery_Selectors">jQuery Selectors</a>
+            </li>
+            <li><hr>
+                <a class="nav-link" href="#jQuery_Event_Methods">jQuery Event Methods</a>
+            </li>
+            <li><hr>
+                <a class="nav-link" href="#Reference">Reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <hr>
+            <h3>What is jQuery?</h3>
+            <p>
+                jQuery is a lightweight, "write less, do more", JavaScript library.<br><br>
+
+                The purpose of jQuery is to make it much easier to use JavaScript on your website.<br><br>
+
+                jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.<br><br>
+
+                jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.<br><br>
+
+                The jQuery library contains the following features:
+            </p>
+            <ul>
+                <li>HTML/DOM manipulation</li>
+                <li>CSS manipulation</li>
+                <li>HTML event methods</li>
+                <li>Effects and animations</li>
+                <li>AJAX</li>
+                <li>Utilities</li>
+            </ul>
+            <h3>Why jQuery?</h3>
+            <p>
+                There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, and also the most extendable.<br><br>
+
+                Many of the biggest companies on the Web use jQuery, such as:
+            </p>
+            <ul>
+                <li>Google</li>
+                <li>Microsoft</li>
+                <li>IBM</li>
+                <li>Netflix</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header><hr>
+            <h3>Adding jQuery to Your Web Pages</h3>
+            <p>
+                There are several ways to start using jQuery on your web site. You can:
+            </p>
+            <ul>
+                <li>Download the jQuery library from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a></li>
+                <li>Include jQuery from a CDN, like Google</li>
+            </ul>
+            <h3>Downloading jQuery</h3>
+            <p>
+                There are two versions of jQuery available for downloading:
+            </p>
+            <ul>
+                <li>Production version - this is for your live website because it has been minified and compressed</li>
+                <li>Development version - this is for testing and development (uncompressed and readable code)</li>
+            </ul>
+            <p>
+                Both versions can be downloaded from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a>.<br><br>
+
+                The jQuery library is a single JavaScript file, and you reference it with the HTML &ltscript&gt tag (notice that the &ltscript&gt tag should be inside the &lthead&gt section):
+                <code>&lthead&gt
+                    &nbsp&ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+                    &lt/head&gt
+                </code>
+            </p>
+            <h3>jQuery CDN</h3>
+            <p>
+                If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).<br><br>
+
+                Google is an example of someone who host jQuery:
+            </p>
+            <h4>Google CDN:</h4>
+            <p>
+                <code>&lthead&gt
+                    &nbsp&ltscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"&gt&lt/script&gt
+                    &lt/head&gt
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="jQuery_Syntax">
+            <header>jQuery Syntax</header><hr>
+            <h3>Syntax</h3>
+            <p>
+                The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).<br><br>
+
+                Basic syntax is:
+                <code>$(selector).action()</code>
+            </p>
+            <ul>
+                <li>A $ sign to define/access jQuery</li>
+                <li>A (selector) to "query (or find)" HTML elements</li>
+                <li>A jQuery action() to be performed on the element(s)</li>
+            </ul>
+            <h4>Examples</h4>
+                <code>$(this).hide() - hides the current element.
+                    $("p").hide() - hides all &ltp&gt elements.
+                    $(".test").hide() - hides all elements with class="test".
+                    $("#test").hide() - hides the element with id="test".
+                </code>
+            <h3>The Document Ready Event</h3>
+            <p>
+                You might have noticed that all jQuery methods in our examples, are inside a document ready event:<br><br>
+
+                <code>$(document).ready(function(){
+
+                        &nbsp // jQuery methods go here...
+        
+                    });
+                </code>
+            </p>
+            <p>
+                This is to prevent any jQuery code from running before the document is finished loading (is ready).<br><br>
+
+                It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head section.<br><br>
+
+                Here are some examples of actions that can fail if methods are run before the document is fully loaded:<br><br>
+            </p>
+            <ul>
+                <li>Trying to hide an element that is not created yet</li>
+                <li>Trying to get the size of an image that is not loaded yet</li>
+            </ul> 
+        </section>
+        <section class="main-section" id="jQuery_Selectors">
+            <header>jQuery Selectors</header><hr>
+            <h3>Selectors</h3>
+            <p>
+                jQuery selectors allow you to select and manipulate HTML element(s).<br><br>
+
+                jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.<br><br>
+
+                All selectors in jQuery start with the dollar sign and parentheses: $().
+            </p>
+            <h3>The element Selector</h3>
+            <p>
+                The jQuery element selector selects elements based on the element name.<br><br>
+
+                You can select all &ltp&gt elements on a page like this:<br><br>
+
+                <code>$("p")</code>
+            </p>
+            <h4>Example:</h4>
+            <p>
+                When a user clicks on a button, all &ltp&gt elements will be hidden:<br><br>
+                <code>$(document).ready(function(){
+                        &nbsp$("button").click(function(){
+                            &nbsp&nbsp$("p").hide();
+                        &nbsp});
+                    });
+                </code>
+            </p>
+            <h3>The #id Selector</h3>
+            <p>
+                The jQuery #id selector uses the id attribute of an HTML tag to find the specific element.<br><br>
+
+                An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.<br><br>
+
+                To find an element with a specific id, write a hash character, followed by the id of the HTML element:<br><br>
+
+                <code>$("#test")</code>
+            </p>
+            <h4>Example:</h4>
+            <p>
+                When a user clicks on a button, the element with id="test" will be hidden:<br><br>
+
+                <code>$(document).ready(function(){
+                        &nbsp$("button").click(function(){
+                            &nbsp&nbsp$("#test").hide();
+                        &nbsp});
+                    });
+                </code>
+            </p>
+            <h3>The .class Selector</h3>
+            <p>
+                The jQuery .class selector finds elements with a specific class.<br><br>
+
+                To find elements with a specific class, write a period character, followed by the name of the class<br><br>
+                <code>$(".test")</code>
+            </p>
+            <h4>Example:</h4>
+            <p>
+                When a user clicks on a button, the elements with class="test" will be hidden:<br><br>
+
+                <code>$(document).ready(function(){
+                        &nbsp$("button").click(function(){
+                            &nbsp&nbsp$(".test").hide();
+                        &nbsp});
+                    });
+                </code>
+            </p>
+            <table>
+                <h3>More Examples of jQuery Selectors</h3>
+                <thead>
+                    <tr>
+                        <td><h4>Syntax</h4></td>
+                        <td><h4>Description</h4></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>$("*")</code></td>
+                        <td>Selects all elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>$(this)</code></td>
+                        <td>Selects the current HTML element</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("p.intro")</code></td>
+                        <td>Selects all &ltp&gt elements with class="intro"</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("p:first")</code></td>
+                        <td>Selects the first &ltp&gt element</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("ul li:first")</code></td>
+                        <td>Selects the first &ltli&gt element of the first &ltul&gt</ul></td>
+                    </tr>
+                    <tr>
+                        <td><code>$("ul li:first-child")</code></td>
+                        <td>Selects the first &ltli&gt element of every &ltul&gt</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("[href]")</code></td>
+                        <td>Selects all elements with an href attribute</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("a[target='_blank']")</code></td>
+                        <td>Selects all &lta&gt elements with a target attribute value equal to "_blank"</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("a[target!='_blank']")</code></td>
+                        <td>Selects all &lta&gt elements with a target attribute value NOT equal to "_blank"</td>
+                    </tr>
+                    <tr>
+                        <td><code>$(":button")</code></td>
+                        <td>Selects all &ltbutton&gt elements and &ltinput&gt elements of type="button"</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("tr:even")</code></td>
+                        <td>Selects all even &lttr&gt elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>$("tr:odd")</code></td>
+                        <td>Selects all odd &lttr&gt elements</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="main-section" id="jQuery_Event_Methods">
+            <header>jQuery Event Methods</header><hr>
+            <h3>What are Events?</h3>
+            <p>
+                All the different visitors' actions that a web page can respond to are called events.<br><br>
+
+                An event represents the precise moment when something happens.
+            </p>
+            <h4>
+                Examples:
+            </h4>
+            <ul>
+                <li>moving a mouse over an element</li>
+                <li>selecting a radio button</li>
+                <li>clicking on an element</li>
+            </ul> 
+            <p>
+                The term "<b>fires/fired</b>" is often used with events. Example: "The keypress event is fired, the moment you press a key".
+            </p>
+            <h3>
+                jQuery Syntax For Event Methods
+            </h3>
+            <p>
+                In jQuery, most DOM events have an equivalent jQuery method.<br><br>
+
+                To assign a click event to all paragraphs on a page, you can do this:<br><br>
+                
+                <code>$("p").click();</code>
+            </p>
+            <p>
+                The next step is to define what should happen when the event fires. You must pass a function to the event:<br>
+
+                <code>$("p").click(function(){
+                        &nbsp// action goes here!!
+                    });
+                </code>
+            </p>
+            <h4>
+                Mouse Events
+            </h4>
+            <ul>
+                <li>click</li>
+                <li>dblclick</li>
+                <li>mouseenter</li>
+                <li>mouseleave</li>
+            </ul> 
+            <h4>
+                Keyboard Events
+            </h4>
+            <ul>
+                <li>keypress</li>
+                <li>keydown</li>
+                <li>keyup</li>
+            </ul> 
+            <h4>
+                Form Events
+            </h4>
+            <ul>
+                <li>submit</li>
+                <li>change</li>
+                <li>focus</li>
+                <li>blur</li>
+            </ul> 
+            <h4>
+                Document/Window Events
+            </h4>
+            <ul>
+                <li>load</li>
+                <li>resize</li>
+                <li>scroll</li>
+                <li>unload</li>
+            </ul> 
+            <h3>Commonly Used jQuery Event Methods</h3>
+            <h4>click()</h4>
+            <p>
+                The click() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed when the user clicks on the HTML element.<br><br>
+
+                The following example says: When a click event fires on a &ltp&gt element; hide the current &ltp&gt element:<br>
+                <code>$("p").click(function(){
+                        &nbsp$(this).hide();
+                    });
+                </code>
+            </p>
+            <h4>dblclick()</h4>
+            <p>
+                The dblclick() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed when the user double-clicks on the HTML element:<br>
+                <code>$("p").dblclick(function(){
+                        &nbsp$(this).hide();
+                    });
+                </code>
+            </p>
+            <h4>mouseenter()</h4>
+            <p>
+                The mouseenter() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed when the mouse pointer enters the HTML element:<br>
+                <code>$("#p1").mouseenter(function(){
+                        &nbspalert("You entered p1!");
+                    });
+                </code>
+            </p>
+            <h4>mouseleave()</h4>
+            <p>
+                The mouseleave() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed when the mouse pointer leaves the HTML element:<br>
+                <code>$("#p1").mouseleave(function(){
+                        &nbspalert("Bye! You now leave p1!");
+                    });
+                </code>
+            </p>
+            <h4>mousedown()</h4>
+            <p>
+                The mousedown() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element:<br>
+                <code>$("#p1").mousedown(function(){
+                        &nbspalert("Mouse down over p1!");
+                    });
+                </code>
+            </p>
+            <h4>mouseup()</h4>
+            <p>
+                The mouseup() method attaches an event handler function to an HTML element.<br><br>
+
+                The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element:<br>
+                <code>$("#p1").mouseup(function(){
+                        &nbspalert("Mouse up over p1!");
+                    });
+                </code>
+            </p>
+            <h4>hover()</h4>
+            <p>
+                The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.<br><br>
+
+                The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element:<br>
+                <code>$("#p1").hover(function(){
+                        &nbspalert("You entered p1!");
+                    },
+                    function(){
+                        &nbspalert("Bye! You now leave p1!");
+                    });
+                </code>
+            </p>
+            <h4>focus()</h4>
+            <p>
+                The focus() method attaches an event handler function to an HTML form field.<br><br>
+
+                The function is executed when the form field gets focus:<br>
+                <code>$("input").focus(function(){
+                        &nbsp$(this).css("background-color", "#cccccc");
+                    });
+                </code>
+            </p>
+            <h4>blur()</h4>
+            <p>
+                The blur() method attaches an event handler function to an HTML form field.<br><br>
+
+                The function is executed when the form field loses focus:<br>
+                <code>$("input").blur(function(){
+                        &nbsp$(this).css("background-color", "#ffffff");
+                    });
+                </code>
+            </p>
+            <h3>The on() Method</h3>
+            <p>
+                The on() method attaches one or more event handlers for the selected elements.<br><br>
+
+                Attach a click event to a &ltp&gt element:<br>
+                <code>$("p").on("click", function(){
+                        &nbsp$(this).hide();
+                    });
+                </code>
+            </p>
+            <p>
+                Attach multiple event handlers to a &ltp&gt element:<br>
+                <code>$("p").on({
+                        &nbspmouseenter: function(){
+                            &nbsp&nbsp $(this).css("background-color", "lightgray");
+                        &nbsp},
+                        &nbspmouseleave: function(){
+                            &nbsp&nbsp$(this).css("background-color", "lightblue");
+                        &nbsp},
+                        &nbspclick: function(){
+                            &nbsp&nbsp$(this).css("background-color", "yellow");
+                        &nbsp}
+                    });
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header><hr>
+            <ul>
+                <li>All the documentation in this page is taken from <a target="_blank" href="https://www.w3schools.com/jquery/default.asp">w3school</a>.</li>
+            </ul> 
+        </section>
+    </main>
+</body>
+</html>
